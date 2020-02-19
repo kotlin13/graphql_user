@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+  graphql_user:
+    image: docker.io/0809199319931993/graphql_user:latest
+    restart: always
+    ports:
+      - "8888:8888"
+    environment:
+      port: 8888
+      JAVA_OPTS: -Dlogback.configurationFile=logback.xml
